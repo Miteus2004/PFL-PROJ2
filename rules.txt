@@ -1,0 +1,42 @@
+Initial Setup
+
+    The board is filled with a checkered pattern of Red and Blue checkers.
+    Red checkers are placed on alternating squares starting from the top-left corner.
+    Blue checkers occupy the other squares.
+    For a 6×6 board:
+        Rows 1, 3, 5 (odd rows): Red checkers are on squares 1, 3, 5, while Blue checkers are on squares 2, 4, 6.
+        Rows 2, 4, 6 (even rows): Blue checkers are on squares 1, 3, 5, while Red checkers are on squares 2, 4, 6.
+    All checkers are in stacks of like-colored checkers.
+    A singleton is a stack with a height of 1.
+    Gameplay
+
+    Two players: Red and Blue.
+    Turns: Players alternate turns, starting with Red.
+    A player must move one of their stacks if possible.
+    If no moves are available, the player skips their turn.
+    At least one player always has a move available.
+    Draws cannot occur.
+
+Moves
+
+Three types of moves are allowed: Positional, Stacking, and Capturing.
+All moves are orthogonal (horizontal or vertical), and each stack moves one square.
+1. Positional Move:
+
+    Move a stack to an unoccupied adjacent square.
+    The move must reduce the Manhattan distance to the nearest stack (regardless of color or height).
+    Only stacks without adjacent stacks can perform positional moves.
+
+2. Stacking Move:
+
+    Move a stack onto an adjacent friendly stack.
+    The destination stack must have an equal or greater height.
+
+3. Capturing Move:
+
+    Capture an adjacent enemy stack.
+    The enemy stack must have an equal or smaller height.
+
+Objective
+
+    Capture all enemy checkers to win.
